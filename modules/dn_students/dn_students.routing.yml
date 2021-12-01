@@ -1,0 +1,31 @@
+dn_students.studentmanage:
+  path: '/admin/structure/dn_students/students/manageStudents'
+  defaults:
+    _title: 'Students'
+    _controller: '\Drupal\dn_students\Controller\StudentController::manageStudents'
+  requirements:
+    _permission: 'administer Students'
+    
+dn_students.delete_student_ajax:
+  path: '/del/dn_students/students/delete/{cid}'
+  defaults:
+    _controller: '\Drupal\dn_students\Controller\StudentController::deleteStudentAjax'
+    _title: 'Delete Student'
+  requirements:
+    _permission: 'administer Students'
+
+dn_students.edit_student_ajax:
+  path: '/ajax/dn_students/students/edit/{cid}'
+  defaults:
+    _controller: '\Drupal\dn_students\Controller\StudentController::editStudentAjax'
+    _title: 'Edit Student'
+  requirements:
+    _permission: 'administer Students'
+    
+dn_students.pagination_student_ajax:
+  path: '/ajax/dn_students/table/page/{no}'
+  defaults:
+    _controller: '\Drupal\dn_students\Controller\StudentController::tablePaginationAjax'
+    _title: 'Table Pagination Student'
+  requirements:
+    _permission: 'administer Students'

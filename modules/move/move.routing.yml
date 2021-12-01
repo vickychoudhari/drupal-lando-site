@@ -1,0 +1,7 @@
+form.move_form :
+  path: '/admin/move/add'
+  defaults:
+    _title: 'MOVE up and down'
+    _form: '\Drupal\move\Form\MoveForm'
+  requirements:
+    _permission: 'access content'

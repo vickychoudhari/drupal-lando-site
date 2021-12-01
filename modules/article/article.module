@@ -1,0 +1,17 @@
+<?php
+
+ /**
+  * @file
+  * Implements hook_theme().
+  */
+function article_theme($existing, $type, $theme, $path) {
+  // {@inheritdoc}.
+  return [
+    'article_tpl' => [
+      'variables' => [
+        'result_node' => NULL,
+      ],
+      'template' => 'article-tpl',
+    ],
+  ];
+}

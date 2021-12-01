@@ -1,0 +1,31 @@
+mymodule.display_data:
+  path: '/admin/mymodule/index'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\DisplayTableController::index'
+    _title: 'All Data'
+  requirements:
+    _permission: 'access content'
+
+mymodule.show_data:
+  path: '/admin/mymodule/{id}/show'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\MydataController::show'
+    _title: 'Show Data'
+  requirements:
+    _permission: 'access content'
+
+mymodule.delete_form:
+  path: '/admin/mymodule/{id}/delete'
+  defaults:
+    _form: '\Drupal\mymodule\Form\Deleteform'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'
+
+mymodule.add_form:
+  path: '/admin/mymodule/add'
+  defaults:
+    _title: 'Add Edit And Delete Data'
+    _form: '\Drupal\mymodule\Form\MyModuleForm'
+  requirements:
+    _permission: 'access content'

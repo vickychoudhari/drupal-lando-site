@@ -1,0 +1,5 @@
+name: Email Button
+description: 'A button that sends email.'
+core: 8.x
+package: custom
+type: module

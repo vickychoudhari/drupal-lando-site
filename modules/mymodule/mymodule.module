@@ -1,0 +1,18 @@
+<?php
+// function custom_page_attachments(array &$page){
+// 	$page['#attached']['#library'][] ='mymodule/lib';
+// }
+/**
+ * Implementation Hook_form_alter
+ * 
+ */
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ */
+function mymodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    //throw new Exception('Oh no, an exception! ' . $form_id);
+     if($form_id == 'mymodule-form') {
+     }
+}
